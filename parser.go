@@ -1,0 +1,18 @@
+package config
+
+import (
+	"gopkg.in/yaml.v2"
+)
+
+func loadYAMLConfig(folderPath string, file string, config interface{}) (interface{}, error) {
+
+	content := read(folderPath, file)
+
+	cfg := config
+
+	err := yaml.Unmarshal(content, &cfg)
+	if err != nil {
+		return nil, err
+	}
+	return cfg, nil
+}
