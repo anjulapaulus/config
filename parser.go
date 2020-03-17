@@ -4,7 +4,7 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-func loadYAMLConfig(folderPath string, file string, config interface{}) (interface{}, error) {
+func LoadYAMLConfig(folderPath string, file string, config interface{}) (interface{}, error) {
 
 	content := read(folderPath, file)
 

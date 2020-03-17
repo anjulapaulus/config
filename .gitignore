@@ -1,1 +1,10 @@
-.idea
+.idea/
+*_db*
+*.tar.gz
+*.zip
+*storage/
+binary/
+driver-selection-handler-*
+vendor/
+go.sum
+build/
