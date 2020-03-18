@@ -23,17 +23,21 @@ import (
 	"github.com/anjulapaulus/config"
 )
 
-type AppConfig struct {
-	Host     string  `yaml:"host"`
+import (
+	"fmt"
+	"github.com/anjulapaulus/config"
+)
+
+type Config struct {
+	APPName string `yaml:"appname"`
 
 }
 
-func main(){
-	r,err := config.LoadYAMLConfig("config","config.yaml", AppConfig{})
-	if err != nil{
-		panic("Could not load configuration")
-	}
-	fmt.Println(r)
+var Cfg Config
+
+func main() {
+	config.LoadConfig("config","config.yaml",&Cfg,true)
+	fmt.Println(Cfg.APPName)
 }
 ````
 

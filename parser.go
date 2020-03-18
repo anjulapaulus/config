@@ -1,7 +1,7 @@
 package config
 
 import (
-	"fmt"
+	"errors"
 	"reflect"
 )
 
@@ -12,7 +12,7 @@ func LoadConfig(folderName string,fileName string, config interface{}, checkUnma
 func load(folderName string,fileName string, config interface{},checkUnmatchedKeys bool)(err error){
 	value := reflect.Indirect(reflect.ValueOf(config))
 	if !value.CanAddr() {
-		return fmt.Errorf("config should be addressable")
+		return errors.New("config should be addressable")
 	}
 	err = readFile(folderName,fileName, config, checkUnmatchedKeys)
 	if err != nil{
