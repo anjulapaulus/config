@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/anjulapaulus/config.svg?branch=master)](https://travis-ci.org/anjulapaulus/config)
+[![HitCount](http://hits.dwyl.com/anjulapaulus/config.svg)](http://hits.dwyl.com/anjulapaulus/config)
 # Config
 Friendly GO YAML, JSON and TOML Configuration loader.
 
