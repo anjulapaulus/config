@@ -1,5 +1,5 @@
 # Config
-Friendly GO YAML Configuration loader.
+Friendly GO YAML, JSON and TOML Configuration loader.
 
 ## Installation
 ````
@@ -13,6 +13,8 @@ Folder Structure
 ````
 config/
     config.yaml
+    config.json
+    config.toml
 main.go
 ````
 
@@ -33,11 +35,30 @@ type Config struct {
 
 }
 
-var Cfg Config
-
 func main() {
-	config.LoadConfig("config","config.yaml",&Cfg,true)
+    #if you want to strictly check on unmatched keys in config file
+    #else false
+	config.LoadConfig("config","config.yaml",&Config,true)
 	fmt.Println(Cfg.APPName)
 }
+````
+
+## Benchmarks
+go test -bench=Read reader_test.go parser.go reader.go parser_test.go
+````
+goos: darwin
+goarch: amd64
+BenchmarkReadFile-8                10000            113305 ns/op
+PASS
+ok      command-line-arguments  1.308s
+````
+go test -bench=Load reader_test.go parser.go reader.go parser_test.go
+````
+goos: darwin
+goarch: amd64
+BenchmarkLoadConfig-8              10000            111349 ns/op
+BenchmarkLoad-8                    10000            110499 ns/op
+PASS
+ok      command-line-arguments  2.382s
 ````
 
