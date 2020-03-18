@@ -1,0 +1,25 @@
+mode: atomic
+github.com/anjulapaulus/config/parser.go:8.109,10.2 1 3
+github.com/anjulapaulus/config/parser.go:12.100,14.22 2 6
+github.com/anjulapaulus/config/parser.go:17.2,18.15 2 6
+github.com/anjulapaulus/config/parser.go:21.2,21.12 1 6
+github.com/anjulapaulus/config/parser.go:14.22,16.3 1 0
+github.com/anjulapaulus/config/parser.go:18.15,20.3 1 0
+github.com/anjulapaulus/config/reader.go:14.104,17.16 3 9
+github.com/anjulapaulus/config/reader.go:20.2,20.9 1 9
+github.com/anjulapaulus/config/reader.go:34.2,34.12 1 0
+github.com/anjulapaulus/config/reader.go:17.16,19.3 1 0
+github.com/anjulapaulus/config/reader.go:21.83,22.21 1 3
+github.com/anjulapaulus/config/reader.go:25.3,25.41 1 0
+github.com/anjulapaulus/config/reader.go:26.44,27.56 1 3
+github.com/anjulapaulus/config/reader.go:28.44,29.56 1 3
+github.com/anjulapaulus/config/reader.go:30.10,31.50 1 0
+github.com/anjulapaulus/config/reader.go:22.21,24.4 1 3
+github.com/anjulapaulus/config/reader.go:38.83,42.20 3 3
+github.com/anjulapaulus/config/reader.go:46.2,47.33 2 3
+github.com/anjulapaulus/config/reader.go:50.2,50.12 1 3
+github.com/anjulapaulus/config/reader.go:42.20,44.3 1 3
+github.com/anjulapaulus/config/reader.go:47.33,49.3 1 0
+github.com/anjulapaulus/config/reader.go:53.83,55.67 2 3
+github.com/anjulapaulus/config/reader.go:58.2,58.12 1 3
+github.com/anjulapaulus/config/reader.go:55.67,57.3 1 0
