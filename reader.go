@@ -21,6 +21,7 @@ func readFile(folderName string, fileName string, config interface{}, checkUnmat
 		return yaml.Unmarshal(content, config)
 
 	}
+	return nil
 
 }
 
