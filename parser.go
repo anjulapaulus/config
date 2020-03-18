@@ -6,11 +6,14 @@ import (
 
 func LoadYAMLConfig(folderPath string, file string, config interface{}) (interface{}, error) {
 
-	content := read(folderPath, file)
+	content, err := read(folderPath, file)
+	if err != nil{
+		return nil, err
+	}
 
 	cfg := config
 
-	err := yaml.Unmarshal(content, &cfg)
+	err = yaml.Unmarshal(content, &cfg)
 	if err != nil {
 		return nil, err
 	}

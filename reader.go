@@ -1,17 +1,14 @@
 package config
 
 import (
-	"fmt"
 	"io/ioutil"
 )
 
-func read(path string, file string) []byte {
-	folder := fmt.Sprintf("./" + path + "/")
-	content, err := ioutil.ReadFile(folder + file)
+func read(path string, file string) ([]byte, error) {
+	content, err := ioutil.ReadFile(path + file)
 	if err != nil {
-		panic(fmt.Sprintf("error: %v", err))
+		return nil, err
 	}
-
-	return content
+	return content,nil
 
 }
