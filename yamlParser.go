@@ -4,9 +4,9 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-func LoadYAMLConfig(filePath string, config interface{}) (interface{}, error) {
+func LoadYAMLConfig(folderName string,fileName string, config interface{}) (interface{}, error) {
 
-	content, err := read(filePath)
+	content, err := read(folderName,fileName)
 	if err != nil{
 		return nil, err
 	}
