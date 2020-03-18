@@ -4,8 +4,8 @@ import (
 	"io/ioutil"
 )
 
-func read(path string, file string) ([]byte, error) {
-	content, err := ioutil.ReadFile(path + file)
+func read(filePath string) ([]byte, error) {
+	content, err := ioutil.ReadFile(filePath)
 	if err != nil {
 		return nil, err
 	}
