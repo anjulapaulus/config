@@ -2,15 +2,25 @@ package config
 
 import (
 	"fmt"
+	"gopkg.in/yaml.v2"
 	"io/ioutil"
+	"strings"
 )
 
-func read(folderName string, fileName string) ([]byte, error) {
+func readFile(folderName string, fileName string, config interface{}, checkUnmatched bool) (err error) {
 	filePath := fmt.Sprintf("./"+folderName+"/"+fileName)
 	content, err := ioutil.ReadFile(filePath)
 	if err != nil {
-		return nil, err
+		return err
 	}
-	return content,nil
+	switch {
+	case strings.HasSuffix(fileName, ".yaml") || strings.HasSuffix(fileName, ".yml"):
+		if checkUnmatched{
+			return yaml.UnmarshalStrict(content,config)
+		}
+		return yaml.Unmarshal(content, config)
+
+	}
 
 }
+
